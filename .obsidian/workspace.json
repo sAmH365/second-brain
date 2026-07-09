@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_Inbox/Spring Batch.md",
+                "file": "1_Inbox/JobOperator.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spring Batch"
+              "title": "JobOperator"
             }
           }
         ]
@@ -196,8 +196,8 @@
   },
   "active": "c8b3a9e26cd270ff",
   "lastOpenFiles": [
-    "1_Inbox/JobOperator.md",
     "1_Inbox/Spring Batch.md",
+    "1_Inbox/JobOperator.md",
     "1_Inbox/트랜잭션 & 트랜잭션 매니저.md",
     "99_assets",
     "2_note",

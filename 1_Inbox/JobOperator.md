@@ -12,8 +12,10 @@ tag: #SpringBatch #JobOperator
 * **한계:** * `Job` 객체와 `JobParameters` 객체를 직접 생성해서 넘겨야 하므로, 외부 API(Controller)나 HTTP 요청에서 파라미터를 받아 호출하기 까다로움.
   * 실행 중인 작업을 중지하거나 재시작하는 등의 '제어' 기능이 없음.
   * 동기(Synchronous)로 돌지, 비동기(Asynchronous)로 돌지 인터페이스 레벨에서 보장하지 않음.
-### JobOperator (권장 버전)
+### JobOperator (6.0+ 최신 버전)
 * **목적:** 배치의 실행, 중지, 재시작, 모니터링을 총괄하는 Wrapper 인터페이스.
-* **메서드:** `start(String jobName, String jobParameters)` 처럼 **String과 Long(ID) 기반으로 호출**.
-* **장점:** * 컨트롤러 단에서 String 형태로 파라미터를 넘기기 쉬워 외부 연동 및 API 구현이 매우 용이함 (JobLauncher의 완전한 래퍼 역할).
-  * `JobLauncher`, `JobRepository`, `JobExplorer` 등의 기능을 내부에서 알아서 조합해 처리해 줌.
+* **핵심 메서드:** 
+  * `start(Job job, JobParameters jobParameters)`: 실행 (6.0부터 새 표준)
+  * `stop(long executionId)`: 중지
+  * `restart(JobExecution jobExecution)`: 재시작
+* **특징:** 과거 5.x 버전까지 지원하던 문자열 기반(`String jobName`) 및 Properties 실행 방식은 파싱 에러 유발 문제로 인해 6.0부터 Deprecated 되었음.

@@ -17,12 +17,12 @@ tag: #SpringBatch
 * 정의: Step을 실행하는 두 가지 핵심 스타일
 ### JobInstance (작업 인스턴스)
 * 정의: Job이 실제 실행될 때 논리적으로 생성되는 고유한 실행 객체
-* 동일한 jobName + 동일한 JobParameter = JobInstance
+* 동일한 jobName + 동일한 JobParameter = **~={green}JobInstance=~**
 ### JobExecution / StepExecution (실행 상태)
 * 정의: Job과 Step이 실제로 실행된 '시도(Attempt)와 결과 상태를 담은 객체'
 ### JobParameters (작업 매개변수)
 * 정의: 배치 실행할 때 외부에서 주입하는 파라미터 (타입: String, Long, Double, Date)
-* JobInstance를 구분하는 기준이 됨
+* ~={yellow}**JobInstance를 구분하는 기준이 됨**=~
 ### JobRepository (저장소)
 * 정의: 배치가 실행되는 모든 메타데이터 (Job 상태, 성공 여부, 실행 시간 등)를 DB에 저장하고 관리하는 관리자역할
 * 키워드: `BATCH_JOB_INSTANCE`, `BATCH_JOB_EXECUTION`
