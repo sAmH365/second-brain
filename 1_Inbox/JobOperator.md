@@ -18,4 +18,7 @@ tag: #SpringBatch #JobOperator
   * `start(Job job, JobParameters jobParameters)`: 실행 (6.0부터 새 표준)
   * `stop(long executionId)`: 중지
   * `restart(JobExecution jobExecution)`: 재시작
-* **특징:** 과거 5.x 버전까지 지원하던 문자열 기반(`String jobName`) 및 Properties 실행 방식은 파싱 에러 유발 문제로 인해 6.0부터 Deprecated 되었음.
+* **특징:**
+	* 이미 **실행 중이거나 실패한 배치**를 **'제어'** 하고 **'모니터링'** 할 때 압도적인 장점
+		* 핵심 메서드를 사용해서 실행 중인 배치를 통제함
+	* 과거 5.x 버전까지 지원하던 문자열 기반(`String jobName`) 및 Properties 실행 방식은 파싱 에러 유발 문제로 인해 6.0부터 Deprecated 되었음.
