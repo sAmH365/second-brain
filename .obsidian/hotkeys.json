@@ -1,6 +1,22 @@
 {
-  "colored-text:color-text": [],
-  "colored-text:remove-color": [],
+  "colored-text:color-text": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
+    }
+  ],
+  "colored-text:remove-color": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "X"
+    }
+  ],
   "fast-text-color:text-color-latestcolor": [
     {
       "modifiers": [
@@ -26,6 +42,15 @@
         "Shift"
       ],
       "key": "X"
+    }
+  ],
+  "colored-text:move-color-cell-forward": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
     }
   ]
 }
